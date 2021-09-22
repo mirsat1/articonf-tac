@@ -1,0 +1,4 @@
+# ignore all hprof files
+*.hprof
+# ignore larg dataset 
+smart-energy-json/out.csv
