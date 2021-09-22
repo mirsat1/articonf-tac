@@ -1,0 +1,20 @@
+#  if([nodes]) {
+#    ruby {
+#      code => "
+#              b = []
+#              event.get('[nodes]').each { |k|
+#                  k['nodes']['position']['lon'] = k['nodes']['Longitude']
+#                    k['nodes'].delete('Longitude')
+#
+#
+#                  k['nodes']['position']['lat'] = k['nodes']['Latitude']
+#                    k['nodes'].delete('Latitude')
+#
+#
+#                #  logger.info('for each k', 'value' => k)
+#                  b << k
+#              }
+#              event.set('[nodes][position]', b)
+#          "
+#    }
+#  }

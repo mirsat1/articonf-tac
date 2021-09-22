@@ -1,0 +1,11 @@
+if (doc['purchase.price'].size() == 0) return 0;
+if (doc['price'].size() == 0) return 0;
+return (((doc['purchase.price'].value * 2) - doc['price'].value) / doc['purchase.price'].value * 2)* 100;
+###################################################################################################################
+if (doc['nodes.firstTag'].size() == 0) return 0;
+if (doc['nodes.firstTag'].value == 0) return 'Bombing';
+if (doc['nodes.firstTag'].value == 1) return 'Fire';
+if (doc['nodes.firstTag'].value == 2) return 'Sport';
+if (doc['nodes.firstTag'].value == 3) return 'Music';
+if (doc['nodes.firstTag'].value == 4) return 'Earthquake';
+if (doc['nodes.firstTag'].value == 5) return 'Traffic Accident';

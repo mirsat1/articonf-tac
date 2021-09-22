@@ -1,0 +1,2 @@
+Testing separate lat/lon field in CSV,
+conf it into logstash
